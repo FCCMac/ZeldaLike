@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://tiles/dungeon.tres" type="TileSet" id=1]
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://tiles/enemy_tilemap.tscn" type="PackedScene" id=5]
 [ext_resource path="res://pickups/key.tscn" type="PackedScene" id=6]
 [ext_resource path="res://tiles/key_door.tscn" type="PackedScene" id=7]
+[ext_resource path="res://tiles/enemy_door.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -40,4 +41,12 @@ position = Vector2( 72, 17 )
 
 [node name="key_door2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 160, 72 )
+rotation = 1.5708
+
+[node name="enemy_door" parent="." instance=ExtResource( 8 )]
+position = Vector2( -8, 72 )
+rotation = 1.5708
+
+[node name="enemy_door2" parent="." instance=ExtResource( 8 )]
+position = Vector2( -8, 88 )
 rotation = 1.5708
