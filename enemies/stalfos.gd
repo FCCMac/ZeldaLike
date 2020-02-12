@@ -5,9 +5,9 @@ var movetimer = 0
 var DAMAGE = 0.5
 
 func _init():
-	SPEED = 40
+	SPEED = 0
 	TYPE = "ENEMY"
-	MAX_HEALTH = 2
+	MAX_HEALTH = 1
 	health = MAX_HEALTH
 	
 func _ready():
@@ -17,7 +17,7 @@ func _ready():
 	movedir = dir.rand()
 
 func _physics_process(delta):
-	#movement_loop()
+	movement_loop()
 	damage_loop()
 	if movetimer > 0:
 		movetimer -= 1
