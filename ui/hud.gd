@@ -1,4 +1,34 @@
 extends CanvasLayer
 
+onready var player = get_node("../player")
+
+const HEART_ROW_SIZE = 8
+const HEART_OFFSET = 8
+
+func _ready():
+	for i in player.MAX_HEALTH:
+		var new_heart = Sprite.new()
+		new_heart.texture = $hearts.texture
+		new_heart.hframes = $hearts.hframes
+		$hearts.add_child(new_heart)
+		
+		var index = new_heart.get_index()
+		var x = (index % HEART_ROW_SIZE) * HEART_OFFSET
+		var y = floor(index / HEART_ROW_SIZE) * HEART_OFFSET
+		new_heart.position = Vector2(x, y)
+		
+		
+	
+
 func _process(delta):
-	$keys.frame = get_node("../player").keys
+	for heart in $hearts.get_children():
+		var index = heart.get_index()
+		var last_heart = floor(player.health)
+		if index > last_heart:
+			heart.frame = 0
+		if index == last_heart:
+			heart.frame = (player.health - last_heart) * 4
+		if index < last_heart:
+			heart.frame = 4
+	
+	$keys.frame = player.keys

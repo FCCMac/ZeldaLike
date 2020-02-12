@@ -4,9 +4,11 @@ var state = "default"
 
 var keys = 0
 
-func _ready():
+func _init():
 	SPEED = 70
 	TYPE = "PLAYER"
+	MAX_HEALTH = 16
+	health = MAX_HEALTH
 
 func _physics_process(delta):
 	match state:

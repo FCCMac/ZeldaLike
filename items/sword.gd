@@ -1,7 +1,7 @@
 extends Node2D
 
 var TYPE = null
-var DAMAGE = 1
+var DAMAGE = 0.5
 
 var max_amount = 1
 

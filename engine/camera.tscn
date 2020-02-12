@@ -32,17 +32,17 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="top" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 80, 16 )
+position = Vector2( 80, 18 )
 shape = SubResource( 2 )
 
 [node name="bottom" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 80, 144 )
+position = Vector2( 80, 142 )
 shape = SubResource( 2 )
 
 [node name="left" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 0, 80 )
+position = Vector2( 2, 80 )
 shape = SubResource( 3 )
 
 [node name="right" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 160, 80 )
+position = Vector2( 158, 80 )
 shape = SubResource( 3 )

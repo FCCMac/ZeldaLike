@@ -1,24 +1,20 @@
 extends KinematicBody2D
 
 var TYPE = null
-var SPEED = 70
-const MAX_HEALTH = 2
+export var SPEED = 70
+export var MAX_HEALTH = 2
+export(float) var health
 
 var movedir = Vector2(0, 0)
 var knockdir = Vector2(0, 0)
 var spritedir = "down"
 
 var hitstun = 0
-var health = MAX_HEALTH
 
 var texture_default = null
 var texture_hurt = null
 
 func _ready():
-	if TYPE == "ENEMY":
-		set_collision_mask_bit(1, 1)
-		set_physics_process(false)
-		
 	texture_default = $Sprite.texture
 	texture_hurt = load($Sprite.texture.get_path().replace(".png", "_hurt.png"))
 
@@ -30,6 +26,7 @@ func movement_loop():
 	else:
 		motion = knockdir.normalized() * 125
 		
+	# warning-ignore:return_value_discarded
 	move_and_slide(motion, dir.center)
 	
 func spritedir_loop():
