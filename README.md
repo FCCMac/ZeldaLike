@@ -1,0 +1,2 @@
+# ZeldaLike
+ZeldaLike is my implementation of [fornclake's Godot tutorial](https://youtu.be/4CLvL05Av6g) in which he creates a 2D top-down adventure game inspired by the Legend of Zelda franchise. I attempt to follow along and make small changes where I run into trouble due to changes in GD script or the editor itself.
