@@ -20,7 +20,7 @@ func _ready():
 		
 	
 
-func _process(delta):
+func _process(_delta):
 	for heart in $hearts.get_children():
 		var index = heart.get_index()
 		var last_heart = floor(player.health)

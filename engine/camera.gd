@@ -5,7 +5,7 @@ func _ready():
 	$area.connect("body_exited", self, "body_exited")
 	$area.connect("area_exited", self, "area_exited")
 
-func _process(delta):
+func _process(_delta):
 	var position = get_node("../player").global_position - Vector2(0, 16)
 	var x = floor(position.x / 160) * 160
 	var y = floor(position.y / 128) * 128

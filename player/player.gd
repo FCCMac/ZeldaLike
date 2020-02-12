@@ -10,7 +10,7 @@ func _init():
 	MAX_HEALTH = 16
 	health = MAX_HEALTH
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	match state:
 		"default":
 			state_default()

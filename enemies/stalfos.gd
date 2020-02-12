@@ -16,7 +16,7 @@ func _ready():
 	$anim.play("default")
 	movedir = dir.rand()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	movement_loop()
 	damage_loop()
 	if movetimer > 0:
